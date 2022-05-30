@@ -5,21 +5,21 @@
 class Poslog < Formula
   desc "Parser to extract SQL from postgresql.log"
   homepage "https://github.com/winebarrel/poslog"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.3.1/poslog_0.3.1_darwin_arm64.tar.gz"
-      sha256 "bd4d76fcb69eed23740ea88552a4aed6835a76fe3eb0c708d0d1afa7a8264564"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.3.2/poslog_0.3.2_darwin_arm64.tar.gz"
+      sha256 "6cd03fcecff106eefcbe6c3798981c22c64b9d167870f58ff1bd906953b63fd0"
 
       def install
         bin.install 'poslog'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.3.1/poslog_0.3.1_darwin_amd64.tar.gz"
-      sha256 "bab2a88200034d6c2a66ad0877f3162163f77eb1c5eef42289fc92a668822791"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.3.2/poslog_0.3.2_darwin_amd64.tar.gz"
+      sha256 "b52a25e3ead454e9e02f6eecf4d1eb35208e36cebe62373bc8844f5ef5c20478"
 
       def install
         bin.install 'poslog'
@@ -29,16 +29,16 @@ class Poslog < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.3.1/poslog_0.3.1_linux_amd64.tar.gz"
-      sha256 "2386f017e3ebc1bd3917588614fa60c101f199815d89f122d6182a13d1861642"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.3.2/poslog_0.3.2_linux_amd64.tar.gz"
+      sha256 "11a57c15ea88fc9a097fdb1d5270e0abd8247437fe8ee68a008b4d898da86702"
 
       def install
         bin.install 'poslog'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.3.1/poslog_0.3.1_linux_arm64.tar.gz"
-      sha256 "443f8e743b0b265f12c7779840e88b48d48a33c22fd0ee1750212cc8af33074e"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.3.2/poslog_0.3.2_linux_arm64.tar.gz"
+      sha256 "566336241e3cf11e8bd963d0b25cb08f55330539649f195b3741b31ea3a6cdc3"
 
       def install
         bin.install 'poslog'
