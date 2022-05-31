@@ -5,21 +5,21 @@
 class Poslog < Formula
   desc "Parser to extract SQL from postgresql.log"
   homepage "https://github.com/winebarrel/poslog"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.5.0/poslog_0.5.0_darwin_arm64.tar.gz"
-      sha256 "7e0a0b4d83df50fca2b575f1ead91fdc96a5580001307262ddf42e9270e94293"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.5.1/poslog_0.5.1_darwin_arm64.tar.gz"
+      sha256 "2ea7dbe6b7f9b9eb8bb7cfa6ea7366ead2d014cb1eb1462e2e941a9d0d669bab"
 
       def install
         bin.install 'poslog'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.5.0/poslog_0.5.0_darwin_amd64.tar.gz"
-      sha256 "d9cd46a41611c01191e074b9cb4375fe7a046e3b8c0f77e06ee4f8f93e646004"
+      url "https://github.com/winebarrel/poslog/releases/download/v0.5.1/poslog_0.5.1_darwin_amd64.tar.gz"
+      sha256 "6be2ba1f73e9f4e7da7cc5e2888f62ece49a5966087ee62e4ad527641c1229a2"
 
       def install
         bin.install 'poslog'
@@ -28,17 +28,17 @@ class Poslog < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.5.0/poslog_0.5.0_linux_arm64.tar.gz"
-      sha256 "ad99c64ace04f8bf4cbf6e99bf3be6f7aa443b326350c7395244db4800a17781"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/poslog/releases/download/v0.5.1/poslog_0.5.1_linux_amd64.tar.gz"
+      sha256 "b388c5cf56183cd1293a5d149b05ef4fa730c5925d338e41272a3e6a998d0f58"
 
       def install
         bin.install 'poslog'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/poslog/releases/download/v0.5.0/poslog_0.5.0_linux_amd64.tar.gz"
-      sha256 "c6ca2a103366776db99ac1045748bd9f5fed2fd5013a6e1c7bc2312603aad9e5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/poslog/releases/download/v0.5.1/poslog_0.5.1_linux_arm64.tar.gz"
+      sha256 "ba49adc87ea6bddba9e777d253a35593055eec9d7fb501a1d3c48e19e21490f8"
 
       def install
         bin.install 'poslog'
